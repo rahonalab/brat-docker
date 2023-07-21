@@ -2,7 +2,14 @@
 # BRAT Docker
 
 ## Introduction
-This is basically a fix of [this_repository][https://gitlab.com/jojolebarjos/brat-docker], which in turn is based on [this repository](https://github.com/ddevaraj/docker-brat) and [this repository](https://github.com/cassj/brat-docker).
+This is basically an upgrade of [this repository](https://gitlab.com/jojolebarjos/brat-docker), which in turn is based on [this repository](https://github.com/ddevaraj/docker-brat) and [this repository](https://github.com/cassj/brat-docker).
+Things that I have fixed/changed in the Dockerfile:
+
+- starting image: httpd-buster, as python2.7 is no longer supported by newer version of Debian (and httpd)
+- debian package: python is now python2.7
+- symbolic link for Python, as Brat expects /usr/bin/python
+- latest version of Brat
+- install.sh should be executable
 
 ## Original README file 
 
